@@ -1,19 +1,17 @@
 import React from 'react';
-import {Image, ImageSourcePropType, StyleSheet} from 'react-native';
-import Images from '../assets/Images.tsx';
+import {Image, StyleSheet} from 'react-native';
+import Asset from '../assets/Asset.tsx';
 
 type ImageProps = {
-  name: keyof typeof Images;
+  asset: Asset;
   width?: number;
   height?: number;
   style?: object;
 };
 
-const Png: React.FC<ImageProps> = ({name, width = 24, height = 24, style}) => {
-  const source: ImageSourcePropType = Images[name];
-
+const Png: React.FC<ImageProps> = ({asset, width = 24, height = 24, style}) => {
   return (
-    <Image source={source} style={[styles.image, {width, height}, style]} />
+    <Image source={asset} style={[styles.image, {width, height}, style]} />
   );
 };
 

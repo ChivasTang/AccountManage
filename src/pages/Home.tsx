@@ -1,6 +1,7 @@
 import {StyleSheet, View} from 'react-native';
 import Header from '../components/Header.tsx';
 import IconButton from '../components/IconButton.tsx';
+import images from '../assets/Asset.tsx';
 
 const Home = () => {
   return (
@@ -18,7 +19,7 @@ const Home = () => {
       />
       <IconButton
         show={true}
-        imgKey={'icon_add'}
+        asset={images.icon_add}
         onPress={function (): void {
           console.log('onClosePressAddIcon...');
         }}

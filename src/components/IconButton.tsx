@@ -1,11 +1,11 @@
 import React from 'react';
 import {StyleSheet, TouchableOpacity, View} from 'react-native';
 import Png from './Png.tsx';
-import Images from '../assets/Images.tsx';
+import Asset from '../assets/Asset.tsx';
 
 type IconButtonProps = {
   show: boolean;
-  imgKey: keyof typeof Images;
+  asset: Asset;
   onPress: () => void;
   width?: number;
   height?: number;
@@ -14,7 +14,7 @@ type IconButtonProps = {
 
 const IconButton: React.FC<IconButtonProps> = ({
   show = true,
-  imgKey,
+  asset,
   onPress,
   width = 24,
   height = 24,
@@ -22,7 +22,7 @@ const IconButton: React.FC<IconButtonProps> = ({
 }) => {
   return show ? (
     <TouchableOpacity onPress={onPress} style={[styles.root, style]}>
-      <Png name={imgKey} width={width} height={height} />
+      <Png asset={asset} width={width} height={height} />
     </TouchableOpacity>
   ) : (
     <View style={[styles.root, style]} />

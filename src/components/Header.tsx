@@ -1,6 +1,7 @@
 import React from 'react';
-import {View, Text, StyleSheet} from 'react-native';
+import {StyleSheet, Text, View} from 'react-native';
 import IconButton from './IconButton.tsx';
+import Asset from '../assets/Asset.tsx';
 
 type HeaderProps = {
   title: string;
@@ -21,13 +22,13 @@ const Header: React.FC<HeaderProps> = ({
     <View style={styles.root}>
       <IconButton
         show={showBackIcon}
-        imgKey={'icon_back'}
+        asset={Asset.icon_back}
         onPress={onBackPress}
       />
       <Text style={styles.title}>{title}</Text>
       <IconButton
         show={showCloseIcon}
-        imgKey={'icon_close'}
+        asset={Asset.icon_close}
         onPress={onClosePress}
       />
     </View>
