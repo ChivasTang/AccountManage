@@ -1,7 +1,7 @@
 #!/bin/zsh
 SCRIPT_PATH=$(realpath "$0")
 PROJECT_ROOT=$(dirname "$SCRIPT_PATH")
-WORK_DIR="$PROJECT_ROOT/src/assets/"
+WORK_DIR="$PROJECT_ROOT/src/assets"
 rm -f "$WORK_DIR/Asset.tsx"
 rm -f "$WORK_DIR/.DS_Store"
 OUTPUT_FILE="$WORK_DIR/Asset.tsx"
@@ -14,4 +14,3 @@ find "$WORK_DIR" -type f ! -name "Asset.tsx" | while read -r file; do
 done
 echo "}" >> "$OUTPUT_FILE"
 echo "export default Asset;" >> "$OUTPUT_FILE"
-echo "Asset.ts •¶Œ›ß¶¬Ý $OUTPUT_FILE"
