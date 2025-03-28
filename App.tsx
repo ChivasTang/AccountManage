@@ -5,12 +5,11 @@ import {
   StyleSheet,
   useColorScheme,
 } from 'react-native';
-import Home from './src/pages/Home.tsx';
 import {Colors} from 'react-native/Libraries/NewAppScreen';
+import Home from './src/pages/Home.tsx';
 
 const App = () => {
   const isDarkMode = useColorScheme() === 'dark';
-
   const backgroundStyle = {
     backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
   };
