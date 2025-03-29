@@ -13,4 +13,5 @@ find "$WORK_DIR" -type f ! -name "Asset.tsx" | while read -r file; do
   echo "  $NAME = require('./$FILE_NAME')," >> "$OUTPUT_FILE"
 done
 echo "}" >> "$OUTPUT_FILE"
+echo "" >> "$OUTPUT_FILE"
 echo "export default Asset;" >> "$OUTPUT_FILE"
